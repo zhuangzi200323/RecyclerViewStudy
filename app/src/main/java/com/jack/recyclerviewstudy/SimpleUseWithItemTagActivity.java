@@ -1,31 +1,34 @@
 package com.jack.recyclerviewstudy;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
-
 import com.blankj.utilcode.util.ToastUtils;
 import com.jack.recyclerviewstudy.adapter.SimpleUseAdapter;
-import com.jack.recyclerviewstudy.databinding.ActivitySimpleUseBinding;
+import com.jack.recyclerviewstudy.databinding.ActivitySimpleUseWithItemLineBinding;
+import com.jack.recyclerviewstudy.decorationline.LeftAndRightTagDecoration;
 import com.jack.recyclerviewstudy.listener.ItemClickListener;
 import com.jack.recyclerviewstudy.model.FakeData;
 
-public class SimpleUseActivity extends BaseActivity implements ItemClickListener {
-    String TAG = SimpleUseActivity.class.getSimpleName();
-    ActivitySimpleUseBinding uiBinding;
+/**
+ * https://www.jianshu.com/p/b46a4ff7c10a
+ */
+public class SimpleUseWithItemTagActivity extends BaseActivity implements ItemClickListener {
+    ActivitySimpleUseWithItemLineBinding uiBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        uiBinding = DataBindingUtil.setContentView(this, R.layout.activity_simple_use);
+        uiBinding = DataBindingUtil.setContentView(this, R.layout.activity_simple_use_with_item_line);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         uiBinding.simpleUseRv.setLayoutManager(linearLayoutManager);
+
+        uiBinding.simpleUseRv.addItemDecoration(new LeftAndRightTagDecoration(this));
 
         SimpleUseAdapter simpleUseAdapter = new SimpleUseAdapter(this, FakeData.items2, this);
         uiBinding.simpleUseRv.setAdapter(simpleUseAdapter);
@@ -33,8 +36,6 @@ public class SimpleUseActivity extends BaseActivity implements ItemClickListener
 
     @Override
     public void itemClick(int pos) {
-        Log.e(TAG, "##### pos " + pos);
-        //Toast.makeText(this, FakeData.items2.get(pos).getData(), Toast.LENGTH_SHORT).show();
         ToastUtils.showShort(FakeData.items2.get(pos).getData(), Toast.LENGTH_SHORT);
     }
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
@@ -11,5 +12,29 @@
         android:layout_height="wrap_content"
         android:text="@string/simple_demo"
         android:onClick="simpleUse"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_item_line"
+        android:onClick="simpleUseWithItemLine"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_item_tag"
+        android:onClick="simpleUseWithItemTag"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_item_group"
+        android:onClick="simpleUseWithItemGroup"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_item_group2"
+        android:onClick="simpleUseWithItemGroup2"/>
 
 </LinearLayout>

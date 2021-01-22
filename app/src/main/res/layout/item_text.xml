@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="pos"
+            type="int" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@{pos%2==0 ? @drawable/item_highlight_selector : @drawable/item_selector}"
+    android:clickable="true"
+    android:paddingVertical="5dp">
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</layout>

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">RecyclerViewStudy</string>
     <string name="simple_demo">简单使用</string>
+    <string name="simple_use_with_item_line">简单使用--带有分隔线</string>
+    <string name="simple_use_with_item_tag">简单使用--带有TAG</string>
+    <string name="simple_use_with_item_group">简单使用--带有分组</string>
+    <string name="simple_use_with_item_group2">简单使用--带有分组2</string>
 </resources>
