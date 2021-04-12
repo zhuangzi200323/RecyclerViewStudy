@@ -16,6 +16,8 @@
         <activity android:name=".SimpleUseWithItemTagActivity" />
         <activity android:name=".SimpleUseWithViewTypeActivity" />
         <activity android:name=".SimpleUseWithBaseAdapterActivity" />
+        <activity android:name=".SimpleUseGridLayoutActivity" />
+        <activity android:name=".SimpleUseStaggeredGridLayoutActivity" />
         <activity android:name=".SimpleUseActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

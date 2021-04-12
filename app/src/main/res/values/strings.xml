@@ -7,4 +7,6 @@
     <string name="simple_use_with_item_group2">简单使用--带有分组2</string>
     <string name="simple_use_with_view_type">简单使用--viewType</string>
     <string name="simple_use_with_base_adapter">简单使用--base adapter</string>
+    <string name="simple_use_with_grid">简单使用--grid layout</string>
+    <string name="simple_use_with_staggered_grid">简单使用--staggered grid layout</string>
 </resources>

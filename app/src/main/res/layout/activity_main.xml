@@ -49,4 +49,15 @@
         android:text="@string/simple_use_with_base_adapter"
         android:onClick="simpleUseWithBaseAdapterActivity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_grid"
+        android:onClick="simpleUseGridLayoutActivity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_staggered_grid"
+        android:onClick="simpleUseStaggeredGridLayoutActivity"/>
 </LinearLayout>

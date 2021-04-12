@@ -44,4 +44,12 @@ public class MainActivity extends AppCompatActivity {
     public void simpleUseWithBaseAdapterActivity(View view) {
         startActivity(new Intent(this, SimpleUseWithBaseAdapterActivity.class));
     }
+
+    public void simpleUseGridLayoutActivity(View view) {
+        startActivity(new Intent(this, SimpleUseGridLayoutActivity.class));
+    }
+
+    public void simpleUseStaggeredGridLayoutActivity(View view) {
+        startActivity(new Intent(this, SimpleUseStaggeredGridLayoutActivity.class));
+    }
 }

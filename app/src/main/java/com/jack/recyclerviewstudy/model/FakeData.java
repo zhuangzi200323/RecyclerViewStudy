@@ -72,6 +72,6 @@ public class FakeData {
         items2.add(new Item("C", "盖追先帝之殊遇，欲报之于陛下也。"));
         items2.add(new Item("C", "诚宜开张圣听，以光先帝遗德，"));
         items2.add(new Item("C", "恢弘志士之气；不宜妄自菲薄，"));
-        items2.add(new Item("C", "引喻失义，以塞忠谏之路也。"));
+        items2.add(new Item("C", "引喻失义，以塞忠谏之路也。引喻失义，以塞忠谏之路也。"));
     }
 }
