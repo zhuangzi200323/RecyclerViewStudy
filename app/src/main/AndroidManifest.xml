@@ -18,6 +18,7 @@
         <activity android:name=".SimpleUseWithBaseAdapterActivity" />
         <activity android:name=".SimpleUseGridLayoutActivity" />
         <activity android:name=".SimpleUseStaggeredGridLayoutActivity" />
+        <activity android:name=".ListViewActivity" />
         <activity android:name=".SimpleUseActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

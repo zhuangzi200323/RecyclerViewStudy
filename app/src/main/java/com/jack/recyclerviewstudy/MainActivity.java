@@ -52,4 +52,8 @@ public class MainActivity extends AppCompatActivity {
     public void simpleUseStaggeredGridLayoutActivity(View view) {
         startActivity(new Intent(this, SimpleUseStaggeredGridLayoutActivity.class));
     }
+
+    public void listViewActivity(View view) {
+        startActivity(new Intent(this, ListViewActivity.class));
+    }
 }

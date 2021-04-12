@@ -9,4 +9,5 @@
     <string name="simple_use_with_base_adapter">简单使用--base adapter</string>
     <string name="simple_use_with_grid">简单使用--grid layout</string>
     <string name="simple_use_with_staggered_grid">简单使用--staggered grid layout</string>
+    <string name="simple_use_with_swipe_delete">简单使用--排序与删除</string>
 </resources>
