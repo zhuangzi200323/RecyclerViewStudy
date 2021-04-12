@@ -6,14 +6,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.jack.recyclerviewstudy.adapter.RecyAdapter;
 import com.jack.recyclerviewstudy.databinding.ActivitySimpleUseBinding;
-import com.jack.recyclerviewstudy.decorationline.DividerListItemDecoration;
+import com.jack.recyclerviewstudy.decorationline.DividerGridItemDecoration;
 import com.jack.recyclerviewstudy.model.FakeData;
 import com.jack.recyclerviewstudy.recyevent.OnRecyclerItemClickListener;
 import com.jack.recyclerviewstudy.recyevent.RecyItemTouchHelperCallback;
@@ -21,8 +21,7 @@ import com.jack.recyclerviewstudy.recyevent.RecyItemTouchHelperCallback;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewActivity extends AppCompatActivity {
-
+public class GridViewActivity extends AppCompatActivity {
     ActivitySimpleUseBinding uiBinding;
     RecyAdapter mRecyAdapter;
 
@@ -37,11 +36,11 @@ public class ListViewActivity extends AppCompatActivity {
     private void initRecy() {
         mRecyAdapter = new RecyAdapter(this, FakeData.items2);
 
-        uiBinding.simpleUseRv.setLayoutManager(new LinearLayoutManager(this));
-        uiBinding.simpleUseRv.addItemDecoration(new DividerListItemDecoration(this, LinearLayoutManager.VERTICAL));
+        uiBinding.simpleUseRv.setLayoutManager(new GridLayoutManager(this, 4));
+        uiBinding.simpleUseRv.addItemDecoration(new DividerGridItemDecoration(this));
         uiBinding.simpleUseRv.setHasFixedSize(true);
 
-        RecyItemTouchHelperCallback itemTouchHelperCallback = new RecyItemTouchHelperCallback(mRecyAdapter);
+        RecyItemTouchHelperCallback itemTouchHelperCallback = new RecyItemTouchHelperCallback(mRecyAdapter, false, true);
         final ItemTouchHelper itemTouchHelper = new ItemTouchHelper(itemTouchHelperCallback);
         itemTouchHelper.attachToRecyclerView(uiBinding.simpleUseRv);
 
@@ -58,6 +57,9 @@ public class ListViewActivity extends AppCompatActivity {
                 RecyAdapter.ViewHolder viewHolder1 = (RecyAdapter.ViewHolder) viewHolder;
                 String tvString = viewHolder1.getBinding().titleTv.getText().toString();
                 ToastUtils.showShort(tvString, Toast.LENGTH_SHORT);
+                if (viewHolder.getLayoutPosition() != 0) {
+                    itemTouchHelper.startDrag(viewHolder);
+                }
             }
         });
         uiBinding.simpleUseRv.setAdapter(mRecyAdapter);

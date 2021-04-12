@@ -56,4 +56,8 @@ public class MainActivity extends AppCompatActivity {
     public void listViewActivity(View view) {
         startActivity(new Intent(this, ListViewActivity.class));
     }
+
+    public void gridViewActivity(View view) {
+        startActivity(new Intent(this, GridViewActivity.class));
+    }
 }

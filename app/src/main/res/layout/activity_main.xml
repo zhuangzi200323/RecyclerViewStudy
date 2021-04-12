@@ -66,4 +66,10 @@
         android:layout_height="wrap_content"
         android:text="@string/simple_use_with_swipe_delete"
         android:onClick="listViewActivity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_grid_swipe_delete"
+        android:onClick="gridViewActivity"/>
 </LinearLayout>

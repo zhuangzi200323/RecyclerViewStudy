@@ -35,6 +35,7 @@ public class RecyAdapter extends RecyclerView.Adapter<RecyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.binding.setPos(position);
         holder.binding.titleTv.setText(items.get(position).getData());
     }
 
