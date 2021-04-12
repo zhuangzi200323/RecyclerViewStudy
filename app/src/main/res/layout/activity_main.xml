@@ -37,4 +37,10 @@
         android:text="@string/simple_use_with_item_group2"
         android:onClick="simpleUseWithItemGroup2"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_view_type"
+        android:onClick="simpleUseWithViewType"/>
+
 </LinearLayout>

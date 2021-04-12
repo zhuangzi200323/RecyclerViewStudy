@@ -36,4 +36,8 @@ public class MainActivity extends AppCompatActivity {
     public void simpleUseWithItemGroup2(View view) {
         startActivity(new Intent(this, SimpleUseWithItemGroup2Activity.class));
     }
+
+    public void simpleUseWithViewType(View view) {
+        startActivity(new Intent(this, SimpleUseWithViewTypeActivity.class));
+    }
 }
