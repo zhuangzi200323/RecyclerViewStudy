@@ -43,4 +43,10 @@
         android:text="@string/simple_use_with_view_type"
         android:onClick="simpleUseWithViewType"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_use_with_base_adapter"
+        android:onClick="simpleUseWithBaseAdapterActivity"/>
+
 </LinearLayout>

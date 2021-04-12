@@ -40,4 +40,8 @@ public class MainActivity extends AppCompatActivity {
     public void simpleUseWithViewType(View view) {
         startActivity(new Intent(this, SimpleUseWithViewTypeActivity.class));
     }
+
+    public void simpleUseWithBaseAdapterActivity(View view) {
+        startActivity(new Intent(this, SimpleUseWithBaseAdapterActivity.class));
+    }
 }

@@ -15,6 +15,7 @@
         <activity android:name=".SimpleUseWithItemGroup2Activity" />
         <activity android:name=".SimpleUseWithItemTagActivity" />
         <activity android:name=".SimpleUseWithViewTypeActivity" />
+        <activity android:name=".SimpleUseWithBaseAdapterActivity" />
         <activity android:name=".SimpleUseActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -6,4 +6,5 @@
     <string name="simple_use_with_item_group">简单使用--带有分组</string>
     <string name="simple_use_with_item_group2">简单使用--带有分组2</string>
     <string name="simple_use_with_view_type">简单使用--viewType</string>
+    <string name="simple_use_with_base_adapter">简单使用--base adapter</string>
 </resources>
